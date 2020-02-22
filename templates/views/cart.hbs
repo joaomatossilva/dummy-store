@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {{>head}}
+    </head>
+    <body>
+        {{>header}}
+        <div class="main">
+            {{#unless data }}
+                <h3> Your cart is empty</h3>
+            {{/unless}}
+            <div class="results">
+                {{#each data}}
+                    {{>cartItem}}
+                {{/each}}
+            </div>
+            {{#if data}}
+                <form method="POST" action="/thank-you">
+                    <input type="submit" value="Buy all" style="float: right;">
+                </form>
+            {{/if}}
+        </div>
+    </body>
+</html>

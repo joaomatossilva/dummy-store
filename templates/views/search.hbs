@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {{>head}}
+    </head>
+    <body>
+        {{>header}}
+        <div class="main">
+            {{>searchbox}}
+
+            <div class="results">
+                {{#each data}}
+                    {{>item}}
+                {{/each}}
+            </div>
+        </div>
+    </body>
+</html>

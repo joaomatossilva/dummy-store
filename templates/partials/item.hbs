@@ -1,0 +1,19 @@
+<div class="item">
+    <a href="/details/{{id}}">
+        <h4>{{title}}</h4>
+        <img src="{{image}}">
+        <div class="price">
+            <form method="POST" action="/cart">
+                <input type="hidden" name="id" id="id" value="{{id}}">
+                <input type="submit" value="+ Cart"> {{price}} €
+            </form>
+             
+        </div>
+        <span class="description">
+            <p>
+                {{description}}
+            </p>
+        </span>
+
+    </a>
+</div>
